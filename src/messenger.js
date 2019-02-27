@@ -3,7 +3,8 @@ class Messenger {
     // Create iframe
     this.iframe = document.createElement('iframe');
     this.iframe.src = src;
-    document.head.appendChild(this.iframe);
+    this.iframe.style.cssText = "display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;";
+    document.body.appendChild(this.iframe);
 
     // Listen for ready
     this.ready = new Promise(resolve => {
